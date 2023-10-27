@@ -1,0 +1,416 @@
+*{
+    margin: 0px 65px;
+    padding: 0;
+    font-family: 'Poppins', sans-serif,'Montserrat';
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+html, body, { 
+    position:fixed; 
+    top:0; 
+    bottom:0; 
+    left:0; 
+    right:0; 
+}
+body{
+    /* background: radial-gradient(202.97% 113.93% at 36.7% 10.37%, #535457 0%, #000 97.96%); */
+    background-image: linear-gradient(to right, #535457, #000);
+    padding: 0;
+    margin: 0;
+}
+/* <!---------------------------------------HEADER----------------------------------------> */
+#header{
+    width: 100%;
+    height: 100vh;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 4.5% 0px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+nav{
+    display:  inline-flex;
+    align-items: flex-start;
+    gap: 91px;
+    /* justify-content: space-between;
+    flex-wrap: wrap; */
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 100px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 100px;
+    position: relative;
+
+}
+nav ul li a::after{
+    content:  '';
+    width: 0;
+    height: 10px;
+    background: #FFD166;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.head-row2-col1{
+    margin-left: 50px;
+}
+.head-row2-col1 img{
+    width: 140%;
+    flex-basis: 100%;
+    padding-left: 20px;
+}
+.head-row2-col2{
+    color: white;
+}
+.head-row2-col2 h1{
+    /* margin-top: 80px; */
+    /* margin-left: -100px; */
+    text-align: left;
+
+}
+.header-text{
+    padding-top: 25%;
+    padding-left: -40px;    
+    font-size: 400px;
+    letter-spacing: 25px;
+    font-weight: 700;   
+}
+.sub-text{
+    font-size: 170px;
+    letter-spacing: 75px;
+    font-weight: 700;   
+    color: #FFD166;
+    text-align: center;
+    font-family: Monserrat;
+}
+
+.social-icons{
+    margin: 30%;
+    margin-left: 1500px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 100px;
+    margin-left: 10px;
+    color: white;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #FFD166;
+    transform: scale(1.1);
+}
+/* <!-------------------------------------HEADER END--------------------------------------> */
+/* <!---------------------------------------ABOUT-----------------------------------------> */
+.about{
+    margin-top: -15%;
+}
+.about h1{
+    font-size: 170px;
+    text-align: center;
+    /* text-decoration: underline;
+    text-underline-offset: 50%; */
+    color: #FFD166;
+    padding-bottom: 5px;
+    position: relative;
+    letter-spacing: 20px;
+}
+.about h1:before{
+    margin-left: 290px;
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 20px;
+    bottom: -50px;
+    border-bottom: 15px solid #FFD166;
+}
+/* .about-text:hover{
+    text-decoration: underline;
+    text-underline-offset: 30%; */
+    /* transition: 0.5s;
+} */
+.about-small-text{
+    padding-top: 3%;
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    letter-spacing: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* <!-------------------------------------ABOUT END---------------------------------------> */
+/* <!---------------------------------------PROJECT---------------------------------------> */
+.projects{
+    margin-top: 600px;
+    margin-left: 6%;
+}
+.project-header{
+    margin-top: -5%;
+    font-size: 200px;
+    text-align: left;
+    /* text-decoration: underline;
+    text-underline-offset: 50%; */
+    color: #FFD166;
+    padding-bottom: 5px;
+    position: relative;
+    letter-spacing: 20px;
+
+}
+.project-header:after {
+    position: absolute;
+    content: "";
+    height: 10px;
+    background-color: #FFD166;
+    width: 70%;
+    margin-left: 15px;
+    top: 75%;
+    } 
+/* #projects{
+    padding:50px;
+} */
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 250px;
+    margin-left: -150px;
+}
+.work{
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 100px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    weight: 100%;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,1,2,0.7), #FFD166);
+    border-radius: 100px;
+    position: absolute;
+    margin-left: 0px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 100px;
+    color: #fff;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 100px;
+    color: white;
+    text-decoration: none;
+    font-size: 80px;
+    line-height: 180px;
+    background: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+
+/* <!------------------------------------PROJECT END--------------------------------------> */
+/* <!---------------------------------------CONTACT---------------------------------------> */
+.contact{
+    margin-top: 600px;
+    margin-left: 10%;
+    margin-bottom: 3%;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+
+/* CONTACT LEFT */
+.contact-left p{
+    margin-top: 100px;
+    margin-left: 50px;
+    color: white;
+    font-size: 70px;
+}
+.contact-left p i{
+    color: white;
+    margin-right: 15px;
+    font-size: 60px;
+}
+.sub-title{
+    font-size: 150px;
+    font-weight: 600;
+    color: #FFD166;
+}
+.sub-title.sub2{
+    margin-bottom: 50px;
+    font-size: 150px;
+    font-weight: 600;
+    color: #FFD166;
+}
+
+/* .social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 50px;
+    color: black;
+    display: inline-table;
+    transition: transform 0.5s;
+} */
+/* .social-icons a:hover{
+    color: red;
+    transform: translateY(-5px);
+} */
+.btn.btn2{
+    margin-top: 200px;
+    display: inline-block;
+    text-align: center ;
+    background: #FFD166;
+    border-radius: 20px;
+    text-decoration: none;
+    height: 120px;
+}
+.btn.btn2 p{
+    margin-top: 20px;
+    color: black;
+    font-size: 60px;
+    font-weight: 10px;
+}
+.contact-right{
+    margin-left: -11%;
+    flex-basis: 35%;
+}
+
+.contact-right1{
+    margin-left: -10%;
+    flex-basis: 40%;
+
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 60px;
+    margin: 50px 10px;
+    color: white;
+    font-size: 60px;
+    border-radius: 6px;
+    resize: none;
+}
+
+form .btn2{
+    margin-top: -20%;
+    padding: 30px;
+    font-size: 60px;
+    margin-left: 85%;
+    cursor: pointer;
+}
+/* form .btn2{
+    padding: 30px;
+    font-size: 60px;
+    cursor: pointer;
+} */
+.copyright{
+    margin-top: 100px;
+    text-align: center;
+    padding: 30px 0;
+    background: #FFD166;
+    background-size: cover;
+    font-weight: 100;
+    margin-top: 20px;
+    color: black;
+}
+.copyright p{
+    font-size: 40px;
+}
+
+.copyright i{
+    color: #ff004f;
+}
+/* ----------------css for samll screen */
+/* nav .fas{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/headshot.JPG);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: red;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+} */
+#msg{
+    color: #61b752;
+    margin-top: 10px;
+    display: block;
+}
+/* <!------------------------------------CONTACT END--------------------------------------> */
+
+/* <!------------------------------------JAVASCRIPT---------------------------------------> */
+/* <!--------------------------------JAVASCRIPT END---------------------------------------> */ */

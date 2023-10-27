@@ -7,13 +7,7 @@
 html{
     scroll-behavior: smooth;
 }
-html, body, { 
-    position:fixed; 
-    top:0; 
-    bottom:0; 
-    left:0; 
-    right:0; 
-}
+
 body{
     /* background: radial-gradient(202.97% 113.93% at 36.7% 10.37%, #535457 0%, #000 97.96%); */
     background-image: linear-gradient(to right, #535457, #000);
@@ -86,6 +80,10 @@ nav ul li a:hover::after{
     /* margin-left: -100px; */
     text-align: left;
 
+}
+.header img{
+    width: 100%;
+    display: block;
 }
 .header-text{
     padding-top: 25%;

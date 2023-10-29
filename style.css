@@ -37,11 +37,13 @@ body {
 }
 
 .header img {
-    max-width: 100%; /* Set the image to occupy half of the row */
+    max-width: 35vw; /* Set the image to occupy half of the row */
+    min-width: auto;
+    height: 100%;
     height: auto;
     display: block;
     margin-left: 8vw;
-    margin-top: -13vw;
+    margin-top: -20vh;
 }
 
 .container {

@@ -1,48 +1,120 @@
-*{
-    margin: 0px 65px;
+* {
+    margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif,'Montserrat';
     box-sizing: border-box;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
-body{
-    /* background: radial-gradient(202.97% 113.93% at 36.7% 10.37%, #535457 0%, #000 97.96%); */
+/* Add a universal box-sizing rule for all elements */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
     background-image: linear-gradient(to right, #535457, #000);
     padding: 0;
     margin: 0;
+    font-size: 16px; /* Set a base font size for responsive design */
 }
-/* <!---------------------------------------HEADER----------------------------------------> */
-#header{
+
+#header {
     width: 100%;
     height: 100vh;
-    height: 50%;
+    /* Remove the 'height: 50%' property as it may not be necessary */
     background-size: cover;
     background-position: center;
 }
-.container{
-    padding: 4.5% 0px;
+
+/* Add a media query for smaller screens (adjust the max-width value as needed) */
+@media (max-width: 768px) {
+    #header {
+        height: auto; /* Allow the header to adapt its height on smaller screens */
+    }
 }
-.row{
+
+.header img {
+    max-width: 100%; /* Set the image to occupy half of the row */
+    height: auto;
+    display: block;
+    margin-left: 8vw;
+    margin-top: -13vw;
+}
+
+.container {
+    padding: 3.5% 3.5%;
+}
+
+.row {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
+    align-items: center;
+    margin-bottom: 2rem;
 }
+
+.header-text,
+.sub-text {
+    text-align: left; /* Align the text to the left */
+    font-size: 0.8rem; /* Make the text smaller */
+    margin-left: 1rem; /* Add margin to the left for spacing */
+}
+
+/* Add a media query to make further adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 1% 1%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+    
+    .header img {
+        max-width: 75%; /* Adjust the image size for smaller screens */
+    }
+
+    .header-text,
+    .sub-text {
+        text-align: center; /* Center-align the text on smaller screens */
+        margin-left: 0; /* Remove the left margin on smaller screens */
+        font-size: 0.9rem; /* Adjust the text size for smaller screens */
+    }
+}
+
+/* Add a media query to make further adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 1% 1%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+    
+    .header-text {
+        font-size: 1.2rem; /* Adjust the header text size for smaller screens */
+    }
+
+    .sub-text {
+        font-size: 0.9rem; /* Adjust the sub-text size for smaller screens */
+    }
+}
+
 
 nav{
     display:  inline-flex;
     align-items: flex-start;
-    gap: 91px;
+    margin-left: 45vw;
+    margin-top: 4vh;
     /* justify-content: space-between;
     flex-wrap: wrap; */
 }
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 0px 100px;
+    margin: 0 8rem;
 }
 nav ul li a{
     color: #fff;
@@ -65,7 +137,7 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .head-row2-col1{
-    margin-left: 50px;
+    margin-left: 2rem;
 }
 .head-row2-col1 img{
     width: 140%;
@@ -80,10 +152,6 @@ nav ul li a:hover::after{
     /* margin-left: -100px; */
     text-align: left;
 
-}
-.header img{
-    width: 100%;
-    display: block;
 }
 .header-text{
     padding-top: 25%;

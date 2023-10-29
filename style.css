@@ -37,8 +37,7 @@ body {
 }
 
 .header img {
-    max-width: 35vw; /* Set the image to occupy half of the row */
-    min-width: auto;
+    width: 30vw; /* Set the image to occupy half of the row */
     height: 100%;
     height: auto;
     display: block;

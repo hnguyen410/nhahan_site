@@ -399,8 +399,9 @@ nav ul li a:hover::after {
 
 .contact-left {
     flex-basis: 35%;
-    margin-top: -22vh;
+    margin-top: -10vh;
     margin-left: 5vw;
+    text-align: left;
 }
 
 /* CONTACT LEFT */
@@ -409,12 +410,28 @@ nav ul li a:hover::after {
     color: white;
     font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
 }
-
+.contact-left img{
+    height: 100%;
+    width: 8vw;
+    display: block;
+    margin-top: 3.5vh;
+    margin-bottom: 3vh;
+    margin-right: 0.5vw;
+}
 .contact-left p i {
     color: white;
     padding: 1vh 1vw;
     margin-right: 1vw; /* Adjust the right margin using viewport width (vw) units */
     font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
+}
+.contact-text{
+    font-size: 2vw; /* Adjust the font size using viewport width (vw) units */
+    font-weight: 600;
+    padding-bottom: 5vh;
+    text-align: left;
+    color: #FFD166;
+    margin-left: 1.3vw;
+    margin-top: 10vh;
 }
 
 /* CONTACT title */
@@ -448,13 +465,14 @@ nav ul li a:hover::after {
     transform: translateY(-5px);
 } */
 .btn.btn2 {
-    margin-top: 5vh; /* Adjust the top margin using viewport height (vh) units */
+    margin-top: 3vh; /* Adjust the top margin using viewport height (vh) units */
     display: inline-block;
     text-align: center;
     padding: 1vh 1vw;
     background: #FFD166;
     border-radius: 0.5vw; /* Adjust the border radius using viewport width (vw) units */
     text-decoration: none;
+    margin-left: 4vw;
 }
 
 .btn.btn2 p {
@@ -513,6 +531,7 @@ form .btn3 {
     font-weight: 100;
     color: white;
     opacity: 0.7;
+    margin-bottom: -2%;
 }
 
 .copyright p {

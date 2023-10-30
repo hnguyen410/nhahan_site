@@ -403,7 +403,26 @@ nav ul li a:hover::after {
     margin-left: 5vw;
     text-align: left;
 }
-
+.row.bee{
+    flex: auto;
+}
+.row.bee img {
+    height: 100%;
+    max-width: 8vw;
+    display: block;
+    margin-top: 3.5vh;
+    margin-bottom: 3vh;
+    margin-right: 0.5vw;
+}
+.row.bee h1{
+    font-size: 2vw; /* Adjust the font size using viewport width (vw) units */
+    font-weight: 600;
+    padding-bottom: 5vh;
+    text-align: left;
+    color: #FFD166;
+    margin-left: 1.3vw;
+    margin-top: 10vh;
+}
 /* CONTACT LEFT */
 .contact-left p {
     margin-left: 0vw; /* Adjust the left margin using viewport width (vw) units */

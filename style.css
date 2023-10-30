@@ -32,7 +32,7 @@ body {
 .header:before {
     position: absolute;
     content: "";
-    height: 10vh; /* Use vh for height */
+    height: 11vh; /* Use vh for height */
     background-color: #FFD166;
     width: 100%;
     margin-top:0;

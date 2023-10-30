@@ -424,7 +424,7 @@ nav ul li a:hover::after {
     margin-right: 1vw; /* Adjust the right margin using viewport width (vw) units */
     font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
 }
-.contact-text{
+.contact-left h1{
     font-size: 2vw; /* Adjust the font size using viewport width (vw) units */
     font-weight: 600;
     padding-bottom: 5vh;

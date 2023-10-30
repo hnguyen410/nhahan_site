@@ -412,7 +412,7 @@ nav ul li a:hover::after {
 }
 .contact-left img{
     height: 100%;
-    width: 8vw;
+    max-width: 8vw;
     display: block;
     margin-top: 3.5vh;
     margin-bottom: 3vh;

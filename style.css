@@ -52,7 +52,6 @@ body {
 .row {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
 }
 
 .header-text{
@@ -95,7 +94,7 @@ nav {
     display: flex;
     align-items: flex-start;
     margin-left: 45vw;
-    margin-top: 1vh;
+    margin-top: 0.7vh;
 }
 
 nav ul {
@@ -106,24 +105,24 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 0 8rem;
+    margin: 0 1vw;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 6rem;
+    font-size: 1.6vw;
     position: relative;
 }
 
 nav ul li a::after {
     content: '';
     width: 0;
-    height: 0.5rem;
+    height: 0.3vh;
     background: #FFD166;
     position: absolute;
     left: 0;
-    bottom: -0.6rem; */
+    bottom: -0.5rem;
     transition: 0.5s;
 }
 
@@ -148,15 +147,20 @@ nav ul li a:hover::after {
         font-size: 0.9rem; /* Adjust font size for smaller screens */
     }
 }
-/* 
-.row.row1{
-    margin-top: 2vh;
-} */
-/* icon row */
+
+.row.row1 img{
+    height: 100%;
+    width: 5vw;
+    display: block;
+    margin-left: 5vw;
+} 
+/* icon row
 
 /* Common styles for the header section */
+.row.row2{
+    margin-top: -2vh;
+}
 .head-row2-col1 {
-    margin-left: 2rem;
     max-width: 50%; /* Set the maximum width for the image to take up half of the row */
     height: auto;
     display: block;
@@ -168,16 +172,16 @@ nav ul li a:hover::after {
 }
 
 .head-row2-col2 h1 {
-    font-size: 2rem; /* Adjust the font size for the header text as needed */
-    margin-top: 1rem; /* Adjust the top margin for the header text as needed */
+    font-size: 2rem; 
+    margin-top: 1rem; 
 }
 
 .header-text {
-    padding-top: 2rem; /* Adjust the top padding for the header text as needed */
-    font-size: 24rem; /* Adjust the font size for the header text as needed */
-    letter-spacing: 0.5rem; /* Adjust the letter spacing for the header text as needed */
-    font-weight: 700;
-    margin-left: -1em;
+    font-size: 25rem; /* Adjust the font size for the header text as needed */
+    letter-spacing: 1rem; /* Adjust the letter spacing for the header text as needed */
+    font-weight: 600;
+    margin-right: 1.5vw;
+    margin-left: -4vw;
     margin-top: 0.3em;
 }
 
@@ -429,29 +433,51 @@ nav ul li a:hover::after {
     color: white;
     font-size: 1vw;
 }
-/* .contact-left img{
-    height: 100%;
-    max-width: 8vw;
-    display: block;
-    margin-top: 3.5vh;
-    margin-bottom: 3vh;
-    margin-right: 0.5vw;
-} */
+
+@media (max-width: 768px) {
+    .contact {
+        margin-top: 5vh;
+        margin-left: 2vw;
+        margin-bottom: 3vh;
+    }
+
+    .contact-left {
+        flex-basis: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .row.bee img {
+        height: 10vh;
+        max-width: 30vw;
+        display: block;
+        margin: 3vh auto;
+    }
+
+    .row.bee h1 {
+        font-size: 2vh;
+        font-weight: 600;
+        padding-bottom: 3vh;
+        text-align: center;
+        color: #FFD166;
+        margin: 0;
+    }
+
+    /* CONTACT LEFT */
+    .contact-left p {
+        margin-left: 0;
+        color: white;
+        font-size: 2vh;
+    }
+}
+
 .contact-left p i {
     color: white;
     padding: 1vh 1vw;
     margin-right: 1vw;
     font-size: 1vw;
 }
-/* .contact-left h1{
-    font-size: 2vw; 
-    font-weight: 600;
-    padding-bottom: 5vh;
-    text-align: left;
-    color: #FFD166;
-    margin-left: 1.3vw;
-    margin-top: 10vh;
-} */
 
 /* CONTACT title */
 .sub-title {
@@ -461,28 +487,6 @@ nav ul li a:hover::after {
     color: #FFD166;
 }
 
-/* .sub-title.sub2 {
-    margin-bottom: 2vh;
-    font-size: 1vw;
-    font-weight: 600;
-    color: #FFD166;
-} */
-
-/* .social-icons{
-    margin-top: 30px;
-}
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-left: 50px;
-    color: black;
-    display: inline-table;
-    transition: transform 0.5s;
-} */
-/* .social-icons a:hover{
-    color: red;
-    transform: translateY(-5px);
-} */
 .btn.btn2 {
     margin-top: 3vh; /* Adjust the top margin using viewport height (vh) units */
     display: inline-block;
@@ -505,7 +509,39 @@ nav ul li a:hover::after {
     margin-right: 16vw;
 }
 
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    .contact {
+        margin: 5vh 2vw 3vh;
+    }
 
+    .contact-left {
+        flex-basis: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .sub-title {
+        font-size: 4vw;
+        padding-bottom: 2vh;
+    }
+
+    .btn.btn2 {
+        margin-top: 3vh;
+        margin-left: 0;
+        width: 50%; /* Adjust the button width */
+    }
+
+    .btn.btn2 p {
+        font-size: 2.5vw;
+    }
+
+    .contact-right {
+        margin-left: 7vw;
+        margin-right: 7vw;
+        flex-basis: 100%;
+    }
+}
 form input,
 form textarea {
     width: 100%;
@@ -556,46 +592,32 @@ form .btn3 {
 .copyright p {
     font-size: 1.3vh; /* Adjust the font size using viewport width (vw) units */;
 }
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    form input,
+    form textarea {
+        padding: 4vh 4vw;
+        font-size: 2vw;
+        border-radius: 2vw;
+    }
 
-/* ----------------css for samll screen */
-/* nav .fas{
-    display: none;
+    .btn.btn3 {
+        margin-top: 4vh;
+        padding: 2vh 2vw;
+        font-size: 2vw;
+        margin-left: 0;
+    }
+
+    form .btn3 {
+        padding: 2vw 2vw;
+        font-size: 2vw;
+    }
+
+    .copyright {
+        padding: 1vh 0;
+        font-size: 1.2vh;
+    }
 }
-@media only screen and (max-width: 600px){
-    #header{
-        background-image: url(images/headshot.JPG);
-    }
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
-    }
-    .header-text h1{
-        font-size: 30px;
-    }
-    nav .fas{
-        display: block;
-        font-size: 25px;
-    }
-    nav ul{
-        background: red;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-    }
-    nav ul li{
-        display: block;
-        margin: 25px;
-    }
-    nav ul .fas{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
-} */
 #msg{
     color: #61b752;
     margin-top: 10px;

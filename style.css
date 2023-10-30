@@ -415,7 +415,7 @@ nav ul li a:hover::after {
     margin-right: 0.5vw;
 }
 .row.bee h1{
-    font-size: 2vw; /* Adjust the font size using viewport width (vw) units */
+    font-size: 2vw;
     font-weight: 600;
     padding-bottom: 5vh;
     text-align: left;
@@ -425,37 +425,37 @@ nav ul li a:hover::after {
 }
 /* CONTACT LEFT */
 .contact-left p {
-    margin-left: 0vw; /* Adjust the left margin using viewport width (vw) units */
+    margin-left: 0vw;
     color: white;
-    font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
+    font-size: 1vw;
 }
-.contact-left img{
+/* .contact-left img{
     height: 100%;
     max-width: 8vw;
     display: block;
     margin-top: 3.5vh;
     margin-bottom: 3vh;
     margin-right: 0.5vw;
-}
+} */
 .contact-left p i {
     color: white;
     padding: 1vh 1vw;
-    margin-right: 1vw; /* Adjust the right margin using viewport width (vw) units */
-    font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
+    margin-right: 1vw;
+    font-size: 1vw;
 }
-.contact-left h1{
-    font-size: 2vw; /* Adjust the font size using viewport width (vw) units */
+/* .contact-left h1{
+    font-size: 2vw; 
     font-weight: 600;
     padding-bottom: 5vh;
     text-align: left;
     color: #FFD166;
     margin-left: 1.3vw;
     margin-top: 10vh;
-}
+} */
 
 /* CONTACT title */
 .sub-title {
-    font-size: 2vw; /* Adjust the font size using viewport width (vw) units */
+    font-size: 2vw; 
     font-weight: 600;
     padding-bottom: 5vh;
     color: #FFD166;

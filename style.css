@@ -147,13 +147,13 @@ nav ul li a:hover::after {
         font-size: 0.9rem; /* Adjust font size for smaller screens */
     }
 }
-
 .row.row1 img{
     height: 100%;
-    width: 5vw;
+    max-width: 5vw;
     display: block;
     margin-left: 5vw;
-} 
+}
+
 /* icon row
 
 /* Common styles for the header section */

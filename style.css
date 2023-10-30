@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-family: "Gill Sans Extrabold", sans-serif;
+    font-family: "Goudy Bookletter 1911", sans-serif;
 }
 
 html {
@@ -185,7 +186,7 @@ nav ul li a:hover::after {
     letter-spacing: 0.5rem; /* Adjust the letter spacing for the subtext as needed */
     color: #FFD166;
     text-align: center;
-    font-family: 'Montserrat';
+    font-family: 'cursive';
 }
 
 .icon.row.row3{
@@ -238,98 +239,108 @@ nav ul li a:hover::after {
 
 /* <!-------------------------------------HEADER END--------------------------------------> */
 /* <!---------------------------------------ABOUT-----------------------------------------> */
-.about{
-    margin-top: 10vh;
+.about {
+    margin-top: -2vh; /* Set the top margin using viewport height (vh) units */
+    padding: 4% 4%; /* Adjust the padding for better spacing */
 }
-.about h1{
-    font-size: 170px;
+
+.about h1 {
+    font-size: 3vw; /* Use a percentage of viewport width (vw) for font size */
     text-align: center;
-    /* text-decoration: underline;
-    text-underline-offset: 50%; */
     color: #FFD166;
     padding-bottom: 5px;
     position: relative;
-    letter-spacing: 20px;
+    letter-spacing: 0.8vw; /* Use vw for letter spacing */
 }
-.about h1:before{
-    margin-left: 290px;
+
+.about h1:before {
+    margin-left: 5vw; /* Use vw for margin */
     content: "";
     position: absolute;
-    width: 8%;
-    height: 20px;
-    bottom: -50px;
-    border-bottom: 15px solid #FFD166;
+    width: 15%;
+    height: 0.5rem; /* Use vh for height */
+    bottom: -1vh; /* Use vh for margin */
+    border-bottom: 0.3vw solid #FFD166; /* Use vw for border width */
 }
-/* .about-text:hover{
-    text-decoration: underline;
-    text-underline-offset: 30%; */
-    /* transition: 0.5s;
-} */
-.about-small-text{
-    padding-top: 3%;
+
+.about-small-text {
+    padding-top: 3%; /* Adjust the top padding as needed */
     text-align: center;
     color: white;
-    font-size: 80px;
-    letter-spacing: 6px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3vw; /* Use vw for font size */
+    letter-spacing: 0.2vw; /* Use vw for letter spacing */
+    font-family: 'cursive';
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+    .about h1 {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+        letter-spacing: 2px; /* Adjust letter spacing for smaller screens */
+    }
 }
 
 /* <!-------------------------------------ABOUT END---------------------------------------> */
 /* <!---------------------------------------PROJECT---------------------------------------> */
-.projects{
-    margin-top: 12vh;
-    padding: 0 8vw;
+.projects {
+    margin-top: 10vh; /* Set the top margin using viewport height (vh) units */
+    /* padding: 0 12vw; Adjust the padding for better spacing on smaller screens */
+    align-items: center;
 }
-.project-header{
-    margin-top: -5%;
-    font-size: 200px;
-    text-align: left;
-    /* text-decoration: underline;
-    text-underline-offset: 50%; */
-    color: #FFD166;
-    padding-bottom: 5px;
-    position: relative;
-    letter-spacing: 20px;
 
+.project-header {
+    margin-top: -4%;
+    margin-left: 7vw;
+    margin-right: 15vw;
+    font-size: 3.5vw; /* Use a percentage of viewport width (vw) for font size */
+    text-align: left;
+    color: #FFD166;
+    padding-bottom: 1vh;
+    position: relative;
+    letter-spacing: 1vw; /* Use vw for letter spacing */
 }
+
 .project-header:after {
     position: absolute;
     content: "";
-    height: 10px;
+    height: 0.5vh; /* Use vh for height */
     background-color: #FFD166;
     width: 70%;
-    margin-left: 15px;
+    margin-left: 1.5vw; /* Use vw for margin */
     top: 75%;
-    } 
-/* #projects{
-    padding:50px;
-} */
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    grid-gap:40px;
-    margin-top: 250px;
-    margin-left: -150px;
 }
-.work{
-    border-radius: 100px;
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 4rem; /* Use vw for grid gap */
+    margin-top: 5vh; /* Use vh for margin */
+    margin-left: 7vw; /* Use vw for margin */
+    margin-right: 7vw;
+}
+
+.work {
+    border-radius: 5vh; /* Use vw for border radius */
     position: relative;
     overflow: hidden;
 }
-.work img{
+
+.work img {
     width: 100%;
-    border-radius: 100px;
+    border-radius:5vh; /* Use vw for border radius */
     display: block;
     transition: transform 0.5s;
 }
-.layer{
-    weight: 100%;
+
+.layer {
+    weight: 100%; /* This might be a typo, should be "width" */
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,1,2,0.7), #FFD166);
-    border-radius: 100px;
+    background: linear-gradient(rgba(0, 1, 2, 0.7), #FFD166);
+    border-radius: 5vh; /* Use vw for border radius */
     position: absolute;
-    margin-left: 0px;
+    margin-left: 0;
     left: 0;
     bottom: 0;
     overflow: hidden;
@@ -337,69 +348,89 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 1vh; /* Use vw for padding */
     text-align: center;
-    font-size: 100px;
+    font-size: 1.5vw; /* Use vw for font size */
     color: #fff;
     transition: height 0.5s;
 }
-.layer h3{
+
+.layer h3 {
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 1vw; /* Use vw for margin */
 }
-.layer a{
-    margin-top: 100px;
+
+.layer a {
+    margin-top: 1vw; /* Use vw for margin */
     color: white;
     text-decoration: none;
-    font-size: 80px;
-    line-height: 180px;
+    font-size: 1.5vw; /* Use vw for font size */
+    line-height: 3.6vw; /* Use vw for line height */
     background: black;
-    width: 200px;
-    height: 200px;
+    opacity: 0.7;
+    width: 3.5vw; /* Use vw for width */
+    height: 3.5vw; /* Use vw for height */
     border-radius: 50%;
     text-align: center;
 }
-.work:hover img{
+
+.work:hover img {
     transform: scale(1.1);
 }
-.work:hover .layer{
+
+.work:hover .layer {
     height: 100%;
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+    .projects {
+        padding: 0 1rem; /* Further reduce padding for smaller screens */
+    }
 }
 
 /* <!------------------------------------PROJECT END--------------------------------------> */
 /* <!---------------------------------------CONTACT---------------------------------------> */
-.contact{
-    margin-top: 600px;
-    margin-left: 10%;
-    margin-bottom: 3%;
+.contact {
+    margin-top: 15vh; /* Adjust the top margin using viewport height (vh) units */
+    margin-left: 10vw; /* Adjust the left margin using viewport width (vw) units */
+    margin-bottom: 3vh; /* Adjust the bottom margin using viewport height (vh) units */
 }
-.contact-left{
+
+.contact-left {
     flex-basis: 35%;
+    margin-top: -22vh;
+    margin-left: 5vw;
 }
 
 /* CONTACT LEFT */
-.contact-left p{
-    margin-top: 100px;
-    margin-left: 50px;
+.contact-left p {
+    margin-left: 0vw; /* Adjust the left margin using viewport width (vw) units */
     color: white;
-    font-size: 70px;
+    font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
 }
-.contact-left p i{
+
+.contact-left p i {
     color: white;
-    margin-right: 15px;
-    font-size: 60px;
+    padding: 1vh 1vw;
+    margin-right: 1vw; /* Adjust the right margin using viewport width (vw) units */
+    font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
 }
-.sub-title{
-    font-size: 150px;
+
+/* CONTACT title */
+.sub-title {
+    font-size: 2vw; /* Adjust the font size using viewport width (vw) units */
     font-weight: 600;
+    padding-bottom: 5vh;
     color: #FFD166;
 }
-.sub-title.sub2{
-    margin-bottom: 50px;
-    font-size: 150px;
+
+/* .sub-title.sub2 {
+    margin-bottom: 2vh;
+    font-size: 1vw;
     font-weight: 600;
     color: #FFD166;
-}
+} */
 
 /* .social-icons{
     margin-top: 30px;
@@ -416,74 +447,79 @@ nav ul li a:hover::after {
     color: red;
     transform: translateY(-5px);
 } */
-.btn.btn2{
-    margin-top: 200px;
+.btn.btn2 {
+    margin-top: 5vh; /* Adjust the top margin using viewport height (vh) units */
     display: inline-block;
-    text-align: center ;
+    text-align: center;
+    padding: 1vh 1vw;
     background: #FFD166;
-    border-radius: 20px;
+    border-radius: 0.5vw; /* Adjust the border radius using viewport width (vw) units */
     text-decoration: none;
-    height: 120px;
 }
-.btn.btn2 p{
-    margin-top: 20px;
+
+.btn.btn2 p {
     color: black;
-    font-size: 60px;
-    font-weight: 10px;
+    font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
 }
-.contact-right{
-    margin-left: -11%;
+
+.contact-right {
+    margin-left: 7vw; /* Adjust the left margin using viewport width (vw) units */
     flex-basis: 35%;
+    margin-right: 16vw;
 }
 
-.contact-right1{
-    margin-left: -10%;
-    flex-basis: 40%;
 
-}
-
-form input, form textarea{
+form input,
+form textarea {
     width: 100%;
     border: 0;
     outline: none;
     background: #262626;
-    padding: 60px;
-    margin: 50px 10px;
+    padding: 2vh 2vw; /* Adjust the padding using viewport width (vw) units */
+    margin: 1vh 0; 
     color: white;
-    font-size: 60px;
-    border-radius: 6px;
+    font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
+    border-radius: 0.5vw; /*Adjust the border radius using viewport width (vw) units*/
     resize: none;
 }
 
-form .btn2{
-    margin-top: -20%;
-    padding: 30px;
-    font-size: 60px;
-    margin-left: 85%;
-    cursor: pointer;
-}
-/* form .btn2{
-    padding: 30px;
-    font-size: 60px;
-    cursor: pointer;
-} */
-.copyright{
-    margin-top: 100px;
+.btn.btn3 {
+    margin-top: 2vh; /* Adjust the top margin using viewport height (vh) units */
+    display: inline-block;
     text-align: center;
-    padding: 30px 0;
+    padding: 1vh 1vw;
     background: #FFD166;
-    background-size: cover;
-    font-weight: 100;
-    margin-top: 20px;
-    color: black;
+    border-radius: 0.2vw; /* Adjust the border radius using viewport width (vw) units */
+    text-decoration: none;
+    margin-left: 98%;
 }
-.copyright p{
-    font-size: 40px;
+form .btn3 {
+    padding: 1vw 1vw; /* Adjust the padding using viewport width (vw) units */
+    font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
+    /* margin-left: 15vw; */
+    cursor: pointer;
+
 }
 
-.copyright i{
-    color: #ff004f;
+.copyright {
+    margin-bottom: 10vh;
+    margin-top: 5vh; /* Adjust the top margin using viewport height (vh) units */
+    text-align: center;
+    padding: 1.0vh 1.5vw; /* Adjust the padding using viewport height (vh) units */
+    /* background-image: linear-gradient(center, #000, #535457); */
+
+    background: #FFD166;
+    opacity: 0.7;
+    background-size: cover;
+    font-weight: 100;
+    color: black;
+    margin-left: -10vw;
 }
+
+.copyright p {
+    font-size: 1.3vh; /* Adjust the font size using viewport width (vw) units */
+}
+
 /* ----------------css for samll screen */
 /* nav .fas{
     display: none;

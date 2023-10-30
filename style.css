@@ -489,7 +489,7 @@ form textarea {
     text-align: center;
     padding: 1vh 1vw;
     background: #FFD166;
-    border-radius: 0.2vw; /* Adjust the border radius using viewport width (vw) units */
+    border-radius: 0.5vw; /* Adjust the border radius using viewport width (vw) units */
     text-decoration: none;
     margin-left: 98%;
 }
@@ -502,22 +502,21 @@ form .btn3 {
 }
 
 .copyright {
-    margin-bottom: 10vh;
-    margin-top: 5vh; /* Adjust the top margin using viewport height (vh) units */
     text-align: center;
-    padding: 1.0vh 1.5vw; /* Adjust the padding using viewport height (vh) units */
+    padding: 0.5vh 0; /* Adjust the padding using viewport height (vh) units */
     /* background-image: linear-gradient(center, #000, #535457); */
-
-    background: #FFD166;
-    opacity: 0.7;
+    /* background: #FFD166; */
+    background-color: transparent;
+    /* background-blend-mode: darken; */
     background-size: cover;
+    width: 100%;
     font-weight: 100;
-    color: black;
-    margin-left: -10vw;
+    color: white;
+    opacity: 0.7;
 }
 
 .copyright p {
-    font-size: 1.3vh; /* Adjust the font size using viewport width (vw) units */
+    font-size: 1.3vh; /* Adjust the font size using viewport width (vw) units */;
 }
 
 /* ----------------css for samll screen */

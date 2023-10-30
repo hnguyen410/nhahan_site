@@ -43,6 +43,10 @@ body {
     #header {
         height: auto; /* Allow the header to adapt its height on smaller screens */
     }
+    .header:before {
+        height: 8vh;
+        /* Add any other adjustments you need for smaller screens */
+    }
 }
 
 .header img {
@@ -250,7 +254,12 @@ nav ul li a:hover::after {
 
     .social-icons a {
         font-size: 1.5rem; /* Adjust the font size for the social icons on smaller screens */
-        margin-right: 0.5rem; /* Adjust the right margin between social icons on smaller screens */
+        margin-right: 0.2rem; /* Adjust the right margin between social icons on smaller screens */
+    }
+    .row.row1 img {
+        max-width: 10vw;
+        margin-left: 2vw;
+        /* Add any other adjustments you need for smaller screens */
     }
 }
 

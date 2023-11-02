@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0px;
     padding: 0;
     box-sizing: border-box;
     font-family: "Gill Sans Extrabold", sans-serif;
@@ -9,44 +9,30 @@
 html {
     scroll-behavior: smooth;
 }
-
-/* Add a universal box-sizing rule for all elements */
 *, *::before, *::after {
     box-sizing: inherit;
 }
-
+/* BODY */
 body {
     background-image: linear-gradient(to right, #535457, #000);
     padding: 0;
     margin: 0;
-    font-size: 16px; /* Set a base font size for responsive design */
+    font-size: 16px;
+    display: block;
 }
 
 #header {
-    /* width: 100%;
-    height: 100vh; */
-    /* Remove the 'height: 50%' property as it may not be necessary */
     background-size: cover;
     background-position: center;
 }
 .header:before {
     position: absolute;
     content: "";
-    height: 11vh; /* Use vh for height */
+    height: 11vh; 
     background-color: #FFD166;
     width: 100%;
     margin-top:0;
     opacity: 0.4;
-}
-/* Add a media query for smaller screens (adjust the max-width value as needed) */
-@media (max-width: 768px) {
-    #header {
-        height: auto; /* Allow the header to adapt its height on smaller screens */
-    }
-    .header:before {
-        height: 8vh;
-        /* Add any other adjustments you need for smaller screens */
-    }
 }
 
 .header img {
@@ -66,53 +52,21 @@ body {
     align-items: center;
 }
 
-.header-text{
-    text-align: left; /* Align the text to the left */
-    font-size: 4vw; /* Make the text smaller */
-    margin-left: 1rem; /* Add margin to the left for spacing */
-}
-.sub-text {
-    text-align: left; /* Align the text to the left */
-    font-size: 4vw; /* Make the text smaller */
-    margin-left: 1rem; /* Add margin to the left for spacing */
-}
-
-
-/* Add a media query to make further adjustments for smaller screens */
-@media (max-width: 768px) {
-    .container {
-        padding: 1% 1%;
-    }
-
-    .row {
-        flex-direction: column;
-    }
-    
-    .header img {
-        max-width: 75%; /* Adjust the image size for smaller screens */
-    }
-
-    .header-text,
-    .sub-text {
-        text-align: center; /* Center-align the text on smaller screens */
-        margin-left: 0; /* Remove the left margin on smaller screens */
-        font-size: 0.9rem; /* Adjust the text size for smaller screens */
-    }
-}
-
-
 /* Default styles for larger screens */
 nav {
-    display: flex;
+    display: block;
     align-items: flex-start;
     margin-left: 45vw;
     margin-top: 0.7vh;
+    max-width: 40vw;
+    position: fixed;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: block;
 }
 
 nav ul li {
@@ -134,30 +88,12 @@ nav ul li a::after {
     background: #FFD166;
     position: absolute;
     left: 0;
-    bottom: -0.5rem;
+    bottom: -0.5vw;
     transition: 0.5s;
 }
 
 nav ul li a:hover::after {
     width: 100%;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 2rem 0; /* Adjust margins for smaller screens */
-    }
-
-    nav ul li {
-        margin: 1rem 0; /* Adjust margins for smaller screens */
-    }
-
-    nav ul li a {
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
-    }
 }
 .row.row1 {
     margin-top: -3%;
@@ -170,7 +106,6 @@ nav ul li a:hover::after {
     display: block;
     margin-left: 5vw;
 }
-
 /* icon row
 
 /* Common styles for the header section */
@@ -189,26 +124,20 @@ nav ul li a:hover::after {
 }
 
 .head-row2-col2 h1 {
-    font-size: 2rem; 
-    margin-top: 1rem; 
+    font-size: 2vw; 
 }
 
 .header-text {
-    font-size: 26rem; /* Adjust the font size for the header text as needed */
-    letter-spacing: 1rem; /* Adjust the letter spacing for the header text as needed */
-    font-weight: 600;
-    margin-right: 1.5vw;
+    font-size: 7vw; 
     margin-left: -4vw;
-    margin-top: 0.3em;
+    margin-top: 10%;
 }
 
 .sub-text {
-    font-size: 10rem; /* Adjust the font size for the subtext as needed */
-    letter-spacing: 0.5rem; /* Adjust the letter spacing for the subtext as needed */
+    font-size: 3vw;
     color: #FFD166;
     text-align: center;
     font-family: 'cursive';
-    margin-left: -2vw;
 }
 
 .icon.row.row3{
@@ -216,16 +145,16 @@ nav ul li a:hover::after {
     margin-left: 50vw;
 }
 .social-icons{
-    margin:30rem 0; /* Adjust the top and bottom margin for the social icons */
+    margin:50% 0;
+    gap: 2vw;
     margin-top: 8vh;
     display: flex;
     margin-left: 50%;
     justify-content: flex-start;
-    gap: 10rem;
 }
 .social-icons a{
     text-decoration: none;
-    font-size: 8rem; /* Adjust the font size for the social icons as needed */
+    font-size: 2vw; /* Adjust the font size for the social icons as needed */
     margin-right: 0; /* Adjust the right margin between social icons as needed */
     color: white;
     transition: transform 0.5s;
@@ -235,39 +164,11 @@ nav ul li a:hover::after {
     transform: scale(1.1);
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px){
-    .header-text {
-        padding-top: 1rem; /* Adjust the top padding for the header text on smaller screens */
-        font-size: 2rem; /* Adjust the font size for the header text on smaller screens */
-        letter-spacing: 0.2rem; /* Adjust the letter spacing for the header text on smaller screens */
-    }
-
-    .sub-text {
-        font-size: 1.2rem; /* Adjust the font size for the subtext on smaller screens */
-        letter-spacing: 0.2rem; /* Adjust the letter spacing for the subtext on smaller screens */
-    }
-
-    .social-icons {
-        margin: 1rem 0; /* Adjust the top and bottom margin for the social icons on smaller screens */
-    }
-
-    .social-icons a {
-        font-size: 1.5rem; /* Adjust the font size for the social icons on smaller screens */
-        margin-right: 0.2rem; /* Adjust the right margin between social icons on smaller screens */
-    }
-    .row.row1 img {
-        max-width: 10vw;
-        margin-left: 2vw;
-        /* Add any other adjustments you need for smaller screens */
-    }
-}
-
 /* <!-------------------------------------HEADER END--------------------------------------> */
 /* <!---------------------------------------ABOUT-----------------------------------------> */
 .about {
-    margin-top: -2vh; /* Set the top margin using viewport height (vh) units */
-    padding: 4% 4%; /* Adjust the padding for better spacing */
+    margin-top: -35%; /* Set the top margin using viewport height (vh) units */
+
 }
 
 .about h1 {
@@ -296,16 +197,8 @@ nav ul li a:hover::after {
     font-size: 1.3vw; /* Use vw for font size */
     letter-spacing: 0.2vw; /* Use vw for letter spacing */
     font-family: 'cursive';
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
-/* Add a media query for smaller screens */
-@media (max-width: 768px) {
-    .about h1 {
-        font-size: 3rem; /* Adjust font size for smaller screens */
-        letter-spacing: 2px; /* Adjust letter spacing for smaller screens */
-    }
-}
 
 /* <!-------------------------------------ABOUT END---------------------------------------> */
 /* <!---------------------------------------PROJECT---------------------------------------> */
@@ -314,57 +207,56 @@ nav ul li a:hover::after {
     /* padding: 0 12vw; Adjust the padding for better spacing on smaller screens */
     align-items: center;
 }
-
 .project-header {
     margin-top: -4%;
     margin-left: 7vw;
     margin-right: 15vw;
-    font-size: 3.5vw; /* Use a percentage of viewport width (vw) for font size */
+    font-size: 3.5vw; 
     text-align: left;
     color: #FFD166;
     padding-bottom: 1vh;
     position: relative;
-    letter-spacing: 1vw; /* Use vw for letter spacing */
+    letter-spacing: 1vw;
 }
 
 .project-header:after {
     position: absolute;
     content: "";
-    height: 0.5vh; /* Use vh for height */
+    height: 0.5vh;
     background-color: #FFD166;
     width: 70%;
-    margin-left: 1.5vw; /* Use vw for margin */
+    margin-left: 1.5vw; 
     top: 75%;
 }
 
 .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 4rem; /* Use vw for grid gap */
-    margin-top: 5vh; /* Use vh for margin */
-    margin-left: 7vw; /* Use vw for margin */
+    grid-gap: 3.5vw;
+    margin-top: 5vh;
+    margin-left: 7vw;
     margin-right: 7vw;
 }
 
 .work {
-    border-radius: 5vh; /* Use vw for border radius */
+    border-radius: 5vh;
     position: relative;
     overflow: hidden;
 }
 
 .work img {
     width: 100%;
-    border-radius:5vh; /* Use vw for border radius */
+    border-radius:5vh;
     display: block;
     transition: transform 0.5s;
 }
 
 .layer {
-    weight: 100%; /* This might be a typo, should be "width" */
+    weight: 100%; 
     width: 100%;
     height: 0;
     background: linear-gradient(rgba(0, 1, 2, 0.7), #FFD166);
-    border-radius: 5vh; /* Use vw for border radius */
+    border-radius: 5vh; 
     position: absolute;
     margin-left: 0;
     left: 0;
@@ -374,28 +266,28 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 1vh; /* Use vw for padding */
+    padding: 0 1vh;
     text-align: center;
-    font-size: 1.5vw; /* Use vw for font size */
+    font-size: 1.5vw;
     color: #fff;
     transition: height 0.5s;
 }
 
 .layer h3 {
     font-weight: 500;
-    margin-bottom: 1vw; /* Use vw for margin */
+    margin-bottom: 1vw;
 }
 
 .layer a {
-    margin-top: 1vw; /* Use vw for margin */
+    margin-top: 1vw;
     color: white;
     text-decoration: none;
-    font-size: 1.5vw; /* Use vw for font size */
-    line-height: 3.6vw; /* Use vw for line height */
+    font-size: 1.5vw;
+    line-height: 3.6vw;
     background: black;
     opacity: 0.7;
-    width: 3.5vw; /* Use vw for width */
-    height: 3.5vw; /* Use vw for height */
+    width: 3.5vw;
+    height: 3.5vw;
     border-radius: 50%;
     text-align: center;
 }
@@ -408,19 +300,13 @@ nav ul li a:hover::after {
     height: 100%;
 }
 
-/* Add a media query for smaller screens */
-@media (max-width: 768px) {
-    .projects {
-        padding: 0 1rem; /* Further reduce padding for smaller screens */
-    }
-}
 
 /* <!------------------------------------PROJECT END--------------------------------------> */
 /* <!---------------------------------------CONTACT---------------------------------------> */
 .contact {
-    margin-top: 15vh; /* Adjust the top margin using viewport height (vh) units */
-    margin-left: 10vw; /* Adjust the left margin using viewport width (vw) units */
-    margin-bottom: 3vh; /* Adjust the bottom margin using viewport height (vh) units */
+    margin-top: 15vh;
+    margin-left: 10vw;
+    margin-bottom: 3vh;
 }
 
 .contact-left {
@@ -456,7 +342,165 @@ nav ul li a:hover::after {
     font-size: 1vw;
 }
 
+.contact-left p i {
+    color: white;
+    padding: 1vh 1vw;
+    margin-right: 1vw;
+    font-size: 1vw;
+}
+
+/* CONTACT title */
+.sub-title {
+    font-size: 2vw; 
+    font-weight: 600;
+    padding-bottom: 5vh;
+    color: #FFD166;
+}
+
+.btn.btn2 {
+    margin-top: 3vh; 
+    display: inline-block;
+    text-align: center;
+    padding: 1vh 1vw;
+    background: #FFD166;
+    border-radius: 0.5vw; 
+    text-decoration: none;
+    margin-left: 4vw;
+}
+
+.btn.btn2 p {
+    color: black;
+    font-size: 1vw; 
+}
+
+.contact-right {
+    margin-left: 7vw;
+    flex-basis: 35%;
+    margin-right: 16vw;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 2vh 2vw;
+    margin: 1vh 0; 
+    color: white;
+    font-size: 1vw;
+    border-radius: 0.5vw; 
+    resize: none;
+}
+
+.btn.btn3 {
+    margin-top: 2vh;
+    display: inline-block;
+    text-align: center;
+    padding: 1vh 1vw;
+    background: #FFD166;
+    border-radius: 0.5vw; 
+    text-decoration: none;
+    margin-left: 98%;
+}
+form .btn3 {
+    padding: 1vw 1vw; 
+    font-size: 1vw; 
+    cursor: pointer;
+
+}
+
+.copyright {
+    text-align: center;
+    padding: 0.5vh 0; 
+    background-color: transparent;
+    background-size: cover;
+    width: 100%;
+    font-weight: 100;
+    color: white;
+    opacity: 0.7;
+    margin-bottom: -2%;
+}
+
+.copyright p {
+    font-size: 1.3vh; /* Adjust the font size using viewport width (vw) units */;
+}
+
+/* <!------------------------------------CONTACT END--------------------------------------> */
+
+/* <!------------------------------------JAVASCRIPT---------------------------------------> */
+/* <!--------------------------------JAVASCRIPT END---------------------------------------> */ 
+/* ------------------------------------SMALL SCREEN------------------------------------------ */
+/* Add a media query for smaller screens (adjust the max-width value as needed) */
 @media (max-width: 768px) {
+    #header {
+        height: auto; /* Allow the header to adapt its height on smaller screens */
+    }
+    .header:before {
+        height: 8vh;
+        /* Add any other adjustments you need for smaller screens */
+    }
+    .container {
+        padding: 1% 1%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+    
+    .header img {
+        max-width: 75%; /* Adjust the image size for smaller screens */
+    }
+
+    .header-text,
+    .sub-text {
+        text-align: center;
+        margin-left: 0;
+        /* font-size: 0.9rem;  */
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0; /* Adjust margins for smaller screens */
+    }
+
+    nav ul li {
+        margin: 1rem 0; /* Adjust margins for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+    .header-text {
+        padding-top: 1rem;
+        font-size: 2rem; 
+        letter-spacing: 0.2rem; 
+    }
+    .sub-text {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem; 
+    }
+    .social-icons {
+        margin: 1rem 0;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem; 
+        margin-right: 0.2rem; 
+    }
+    .row.row1 img {
+        max-width: 10vw;
+        margin-left: 2vw;
+    }
+    .about h1 {
+        font-size: 3rem; 
+        letter-spacing: 2px; 
+    }
+    .projects {
+        padding: 0 1rem;
+    }
+
     .contact {
         margin-top: 5vh;
         margin-left: 2vw;
@@ -492,46 +536,6 @@ nav ul li a:hover::after {
         color: white;
         font-size: 2vh;
     }
-}
-
-.contact-left p i {
-    color: white;
-    padding: 1vh 1vw;
-    margin-right: 1vw;
-    font-size: 1vw;
-}
-
-/* CONTACT title */
-.sub-title {
-    font-size: 2vw; 
-    font-weight: 600;
-    padding-bottom: 5vh;
-    color: #FFD166;
-}
-
-.btn.btn2 {
-    margin-top: 3vh; /* Adjust the top margin using viewport height (vh) units */
-    display: inline-block;
-    text-align: center;
-    padding: 1vh 1vw;
-    background: #FFD166;
-    border-radius: 0.5vw; /* Adjust the border radius using viewport width (vw) units */
-    text-decoration: none;
-    margin-left: 4vw;
-}
-
-.btn.btn2 p {
-    color: black;
-    font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
-}
-
-.contact-right {
-    margin-left: 7vw; /* Adjust the left margin using viewport width (vw) units */
-    flex-basis: 35%;
-    margin-right: 16vw;
-}
-
-@media (max-width: 768px) {
     /* Adjust styles for smaller screens here */
     .contact {
         margin: 5vh 2vw 3vh;
@@ -563,58 +567,6 @@ nav ul li a:hover::after {
         margin-right: 7vw;
         flex-basis: 100%;
     }
-}
-form input,
-form textarea {
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 2vh 2vw; /* Adjust the padding using viewport width (vw) units */
-    margin: 1vh 0; 
-    color: white;
-    font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
-    border-radius: 0.5vw; /*Adjust the border radius using viewport width (vw) units*/
-    resize: none;
-}
-
-.btn.btn3 {
-    margin-top: 2vh; /* Adjust the top margin using viewport height (vh) units */
-    display: inline-block;
-    text-align: center;
-    padding: 1vh 1vw;
-    background: #FFD166;
-    border-radius: 0.5vw; /* Adjust the border radius using viewport width (vw) units */
-    text-decoration: none;
-    margin-left: 98%;
-}
-form .btn3 {
-    padding: 1vw 1vw; /* Adjust the padding using viewport width (vw) units */
-    font-size: 1vw; /* Adjust the font size using viewport width (vw) units */
-    /* margin-left: 15vw; */
-    cursor: pointer;
-
-}
-
-.copyright {
-    text-align: center;
-    padding: 0.5vh 0; /* Adjust the padding using viewport height (vh) units */
-    /* background-image: linear-gradient(center, #000, #535457); */
-    /* background: #FFD166; */
-    background-color: transparent;
-    /* background-blend-mode: darken; */
-    background-size: cover;
-    width: 100%;
-    font-weight: 100;
-    color: white;
-    opacity: 0.7;
-    margin-bottom: -2%;
-}
-
-.copyright p {
-    font-size: 1.3vh; /* Adjust the font size using viewport width (vw) units */;
-}
-@media (max-width: 768px) {
     /* Adjust styles for smaller screens here */
     form input,
     form textarea {
@@ -645,7 +597,3 @@ form .btn3 {
     margin-top: 10px;
     display: block;
 }
-/* <!------------------------------------CONTACT END--------------------------------------> */
-
-/* <!------------------------------------JAVASCRIPT---------------------------------------> */
-/* <!--------------------------------JAVASCRIPT END---------------------------------------> */ */

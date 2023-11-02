@@ -59,7 +59,7 @@ nav {
     margin-left: 45vw;
     margin-top: 0.7vh;
     max-width: 40vw;
-    position: fixed;
+    position: relative;
 }
 
 nav ul {
@@ -79,6 +79,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.6vw;
     position: relative;
+    display: block;
 }
 
 nav ul li a::after {
@@ -105,6 +106,7 @@ nav ul li a:hover::after {
     margin-top: 1%;
     display: block;
     margin-left: 5vw;
+    position: relative;
 }
 /* icon row
 
@@ -113,7 +115,7 @@ nav ul li a:hover::after {
     margin-top: 4%;
 }
 .head-row2-col1 {
-    max-width: 50%; /* Set the maximum width for the image to take up half of the row */
+    max-width: 50%;
     height: auto;
     display: block;
 }
@@ -121,6 +123,7 @@ nav ul li a:hover::after {
 .head-row2-col2 {
     color: white;
     text-align: left;
+    display: block;
 }
 
 .head-row2-col2 h1 {
@@ -128,12 +131,14 @@ nav ul li a:hover::after {
 }
 
 .header-text {
+    position: relative;
     font-size: 7vw; 
     margin-left: -4vw;
     margin-top: 10%;
 }
 
 .sub-text {
+    position: relative;
     font-size: 3vw;
     color: #FFD166;
     text-align: center;
@@ -230,6 +235,7 @@ nav ul li a:hover::after {
 }
 
 .work-list {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 3.5vw;
@@ -249,6 +255,7 @@ nav ul li a:hover::after {
     border-radius:5vh;
     display: block;
     transition: transform 0.5s;
+    position: relative;
 }
 
 .layer {

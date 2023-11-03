@@ -481,7 +481,15 @@ form .btn3 {
     .header img {
         max-width: 75%; /* Adjust the image size for smaller screens */
     }
+    .logo {
 
+        max-width: 4vw;
+        max-block-size: 4vw;
+        height: auto;
+        margin-left: 5vw;
+        position: absolute;
+        display: block;
+    }
     .header-text,
     .sub-text {
         text-align: center;
@@ -511,8 +519,13 @@ form .btn3 {
         font-size: 1.2rem;
         letter-spacing: 0.2rem; 
     }
+    .icons {
+        align-items: center;
+        text-align: center;
+    }
     .social-icons {
         margin: 1rem 0;
+        align-items: center;
     }
 
     .social-icons a {

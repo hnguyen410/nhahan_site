@@ -44,7 +44,7 @@ body {
 }
 
 .container {
-    padding: 3.5vw 3vh;
+    padding: 3.5vw 8vh;
     position: relative;
 }
 
@@ -58,7 +58,7 @@ body {
 nav {
     display: inline-flexbox;
     align-items: flex-start;
-    margin-left: 60vw;
+    margin-left: 55vw;
     margin-top: 0.7vh;
     max-width: 40vw;
     position: relative;
@@ -80,16 +80,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: black;
     text-decoration: none;
     font-size: 1.6vw;
-    font-size-adjust: ;
     max-block-size: 1.6vw;
     position: relative;
     display: inline-block;
 }
 
-nav ul li a::after {
+/* nav ul li a::after {
     content: '';
     width: 0;
     height: 0.3vh;
@@ -98,10 +97,12 @@ nav ul li a::after {
     left: 0;
     bottom: -0.5vw;
     transition: 0.5s;
-}
+} */
 
-nav ul li a:hover::after {
+nav ul li a:hover {
     width: 100%;
+    color: #fff;
+    transform: scale(1.1);
 }
 .row.row1 {
     margin-top: -1vh;

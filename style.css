@@ -53,7 +53,9 @@ body {
     align-items: center;
     position: relative;
 }
-
+.option-list{
+    max-width: fit-content;
+}
 /* Default styles for larger screens */
 nav {
     display: inline-flexbox;
@@ -108,13 +110,14 @@ nav ul li a:hover {
     margin-top: 0vh;
     position: relative;
 }
-.logo{
+.logo a{
     font-size: 8vw;
     /* max-block-size: 8vw; */
     /* max-height: fit-content; */
     margin-left: 5vw;
     position: relative;
 }
+
 .row.row1 img{
     height: 100%;
     max-width: 3.5vw;

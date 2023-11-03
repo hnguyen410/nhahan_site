@@ -160,7 +160,8 @@ nav ul li a:hover {
     font-family: 'cursive';
 }
 .icons{
-    margin-left: 50%;
+    margin-left: 45%;
+    
 }
 .social-icons{
     margin: 5vh 0;
@@ -488,7 +489,8 @@ form .btn3 {
         max-block-size: 4vw;
         height: auto;
         margin-left: 5vw;
-        position: absolute;
+        position: relative;
+        margin-top: 2vh;
         display: block;
     }
     .header-text,
@@ -501,7 +503,7 @@ form .btn3 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 2rem 0; /* Adjust margins for smaller screens */
+        margin: 0 0; /* Adjust margins for smaller screens */
     }
 
     nav ul li {

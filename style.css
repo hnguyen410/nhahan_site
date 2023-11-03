@@ -44,7 +44,7 @@ body {
 }
 
 .container {
-    padding: 3.5vw 8vh;
+    padding: 1.5vw 8vh;
     position: relative;
 }
 
@@ -57,26 +57,26 @@ body {
 /* Default styles for larger screens */
 nav {
     display: inline-flexbox;
-    align-items: flex-start;
-    margin-left: 55vw;
-    margin-top: 0.7vh;
+    /* align-items: flex-start; */
+    margin-left: 40vw;
+    /* margin-top: 0.7vh; */
     max-width: 40vw;
     position: relative;
+    display: flex;
 
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
+    margin: 0 0;
     padding: 0;
-    display: block;
     position: relative;
 }
 
 nav ul li {
     display: inline-block;
     position: relative;
-    margin: 0 1vw;
+    margin: 0 2vw;
 }
 
 nav ul li a {
@@ -105,14 +105,15 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 .row.row1 {
-    margin-top: -1vh;
+    margin-top: 0vh;
     position: relative;
 }
 .logo{
-    max-block-size: 4vw;
-    max-height: fit-content;
+    font-size: 8vw;
+    /* max-block-size: 8vw; */
+    /* max-height: fit-content; */
     margin-left: 5vw;
-    position: absolute;
+    position: relative;
 }
 .row.row1 img{
     height: 100%;
@@ -160,8 +161,10 @@ nav ul li a:hover {
     font-family: 'cursive';
 }
 .icons{
-    margin-left: 45%;
-    
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: justify;
 }
 .social-icons{
     margin: 5vh 0;
@@ -344,7 +347,6 @@ nav ul li a:hover {
 .contact-left {
     flex-basis: 35%;
     margin-top: -10vh;
-    margin-left: 5vw;
     text-align: left;
 }
 .row.bee{
@@ -490,7 +492,7 @@ form .btn3 {
         height: auto;
         margin-left: 5vw;
         position: relative;
-        margin-top: 2vh;
+        margin-top: 3.5vh;
         display: block;
     }
     .header-text,
@@ -504,6 +506,7 @@ form .btn3 {
         flex-direction: column;
         align-items: center;
         margin: 0 0; /* Adjust margins for smaller screens */
+        display: flex;
     }
 
     nav ul li {

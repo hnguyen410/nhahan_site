@@ -1,5 +1,5 @@
 * {
-    margin: 0px;
+    margin: 0px 0px;
     padding: 0;
     box-sizing: border-box;
     font-family: "Gill Sans Extrabold", sans-serif;
@@ -28,38 +28,41 @@ body {
 .header:before {
     position: absolute;
     content: "";
-    height: 11vh; 
+    height: 13vh; 
     background-color: #FFD166;
     width: 100%;
     margin-top:0;
     opacity: 0.4;
 }
-
 .header img {
     height: 100%;
     width: 35vw;
+    max-width: 35vw;
     display: block;
     margin-left: 8vw;
     margin-top: 3.5vh;
 }
 
 .container {
-    padding: 3.5% 3%;
+    padding: 3.5vw 3vh;
+    position: relative;
 }
 
 .row {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 /* Default styles for larger screens */
 nav {
-    display: block;
+    display: inline-flexbox;
     align-items: flex-start;
-    margin-left: 45vw;
+    margin-left: 60vw;
     margin-top: 0.7vh;
     max-width: 40vw;
     position: relative;
+
 }
 
 nav ul {
@@ -67,10 +70,12 @@ nav ul {
     margin: 0;
     padding: 0;
     display: block;
+    position: relative;
 }
 
 nav ul li {
     display: inline-block;
+    position: relative;
     margin: 0 1vw;
 }
 
@@ -78,8 +83,10 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.6vw;
+    font-size-adjust: ;
+    max-block-size: 1.6vw;
     position: relative;
-    display: block;
+    display: inline-block;
 }
 
 nav ul li a::after {
@@ -97,16 +104,21 @@ nav ul li a:hover::after {
     width: 100%;
 }
 .row.row1 {
-    margin-top: -3%;
+    margin-top: -1vh;
+    position: relative;
 }
-
+.logo{
+    max-block-size: 4vw;
+    max-height: fit-content;
+    margin-left: 5vw;
+    position: absolute;
+}
 .row.row1 img{
     height: 100%;
     max-width: 3.5vw;
     margin-top: 1%;
     display: block;
     margin-left: 5vw;
-    position: relative;
 }
 /* icon row
 
@@ -127,7 +139,8 @@ nav ul li a:hover::after {
 }
 
 .head-row2-col2 h1 {
-    font-size: 2vw; 
+    font-size: 2vw;
+    max-width: fit-content;
 }
 
 .header-text {
@@ -140,6 +153,7 @@ nav ul li a:hover::after {
 .sub-text {
     position: relative;
     font-size: 3vw;
+    max-block-size: 3vw;
     color: #FFD166;
     text-align: center;
     font-family: 'cursive';
@@ -150,7 +164,7 @@ nav ul li a:hover::after {
     margin-left: 50vw;
 }
 .social-icons{
-    margin:50% 0;
+    margin: 5vh 0;
     gap: 2vw;
     margin-top: 8vh;
     display: flex;
@@ -160,9 +174,10 @@ nav ul li a:hover::after {
 .social-icons a{
     text-decoration: none;
     font-size: 2vw; /* Adjust the font size for the social icons as needed */
+    max-block-size: 2vw;
     margin-right: 0; /* Adjust the right margin between social icons as needed */
     color: white;
-    transition: transform 0.5s;
+    transition: transform 0.7s;
 }
 .social-icons a:hover{
     color: #FFD166;
@@ -172,15 +187,18 @@ nav ul li a:hover::after {
 /* <!-------------------------------------HEADER END--------------------------------------> */
 /* <!---------------------------------------ABOUT-----------------------------------------> */
 .about {
-    margin-top: -35%; /* Set the top margin using viewport height (vh) units */
+    margin-top: 0; /* Set the top margin using viewport height (vh) units */
+    position: relative;
+    display: block;
+    align-items: center;
 
 }
-
-.about h1 {
+.about-big{
     font-size: 3vw; /* Use a percentage of viewport width (vw) for font size */
+    max-block-size: 3vw;
+    max-height: 10%;
     text-align: center;
     color: #FFD166;
-    padding-bottom: 5px;
     position: relative;
     letter-spacing: 0.8vw; /* Use vw for letter spacing */
 }
@@ -190,16 +208,19 @@ nav ul li a:hover::after {
     content: "";
     position: absolute;
     width: 15%;
-    height: 0.5rem; /* Use vh for height */
+    max-width: 15%;
+    height: 0.5vh; /* Use vh for height */
+    max-height: 0.5vh;
     bottom: -1vh; /* Use vh for margin */
     border-bottom: 0.3vw solid #FFD166; /* Use vw for border width */
 }
 
-.about-small-text {
-    padding-top: 3%; /* Adjust the top padding as needed */
+.about-small{
+    margin-top: 5vh; /* Adjust the top padding as needed */
     text-align: center;
     color: white;
     font-size: 1.3vw; /* Use vw for font size */
+    max-block-size: 1.3vw;
     letter-spacing: 0.2vw; /* Use vw for letter spacing */
     font-family: 'cursive';
 }
@@ -208,15 +229,15 @@ nav ul li a:hover::after {
 /* <!-------------------------------------ABOUT END---------------------------------------> */
 /* <!---------------------------------------PROJECT---------------------------------------> */
 .projects {
-    margin-top: 10vh; /* Set the top margin using viewport height (vh) units */
-    /* padding: 0 12vw; Adjust the padding for better spacing on smaller screens */
+    margin-top: 30vh; /* Set the top margin using viewport height (vh) units */
     align-items: center;
 }
 .project-header {
-    margin-top: -4%;
+    margin-top: 0;
     margin-left: 7vw;
     margin-right: 15vw;
     font-size: 3.5vw; 
+    max-block-size: 3.5VW;
     text-align: left;
     color: #FFD166;
     padding-bottom: 1vh;
@@ -233,7 +254,12 @@ nav ul li a:hover::after {
     margin-left: 1.5vw; 
     top: 75%;
 }
-
+/* see more button */
+.see-more{
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
 .work-list {
     position: relative;
     display: grid;
@@ -242,6 +268,7 @@ nav ul li a:hover::after {
     margin-top: 5vh;
     margin-left: 7vw;
     margin-right: 7vw;
+    
 }
 
 .work {

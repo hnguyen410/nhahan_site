@@ -28,7 +28,7 @@ body {
 .header:before {
     position: absolute;
     content: "";
-    height: 13vh; 
+    height: 13vh;
     background-color: #FFD166;
     width: 100%;
     margin-top:0;
@@ -53,15 +53,13 @@ body {
     align-items: center;
     position: relative;
 }
-.option-list{
-    max-width: fit-content;
-}
+
 /* Default styles for larger screens */
 nav {
     display: inline-flexbox;
     /* align-items: flex-start; */
-    padding: 1.8vw 2vh;
-    margin-left: 35vw;    /* margin-top: 0.7vh; */
+    margin-left: 40vw;
+    /* margin-top: 0.7vh; */
     max-width: 40vw;
     position: relative;
     display: flex;
@@ -71,6 +69,7 @@ nav {
 nav ul {
     list-style: none;
     margin: 0 0;
+    padding: 0;
     position: relative;
 }
 
@@ -81,7 +80,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1.6vw;
     max-block-size: 1.6vw;
@@ -109,15 +108,13 @@ nav ul li a:hover {
     margin-top: 0vh;
     position: relative;
 }
-.logo a{
+.logo{
     font-size: 8vw;
     /* max-block-size: 8vw; */
     /* max-height: fit-content; */
-    padding: 5vh;
     margin-left: 5vw;
     position: relative;
 }
-
 .row.row1 img{
     height: 100%;
     max-width: 3.5vw;
@@ -150,7 +147,7 @@ nav ul li a:hover {
 
 .header-text {
     position: relative;
-    font-size: 7vw; 
+    font-size: 7vw;
     margin-left: -4vw;
     margin-top: 10%;
 }
@@ -190,12 +187,11 @@ nav ul li a:hover {
 
 /* <!-------------------------------------HEADER END--------------------------------------> */
 /* <!---------------------------------------ABOUT-----------------------------------------> */
-#about-section{
+.about {
     margin-top: 10vh; /* Set the top margin using viewport height (vh) units */
     position: relative;
     display: block;
     align-items: center;
-    padding: 60px 60px;
 
 }
 .about-big{
@@ -205,11 +201,11 @@ nav ul li a:hover {
     text-align: center;
     color: #FFD166;
     position: relative;
-    letter-spacing: 0.4vw; /* Use vw for letter spacing */
-    margin-bottom: 20px;
+    letter-spacing: 0.8vw; /* Use vw for letter spacing */
 }
 
 .about-big::before {
+    margin-left: 5vw; /* Use vw for margin */
     content: "";
     position: absolute;
     width: 13%;
@@ -222,102 +218,15 @@ nav ul li a:hover {
 
 .about-small{
     margin-top: 5vh; /* Adjust the top padding as needed */
+    text-align: center;
     color: white;
-    text-align: left;
     font-size: 1.5vw; /* Use vw for font size */
+    max-block-size: 1.3vw;
+    letter-spacing: 0.2vw; /* Use vw for letter spacing */
     font-family: 'cursive';
 }
-/* ---------------------------SKILLS------------------- */
-.about{
-    padding: 60px 10px;
-    font-size: 20px;
-    font-family: 'Times New Roman';
-}
-.row.about-row{
-    /* display: flex; */
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 50px 0;
-}
-.about-col-1{
-    flex-basis: 40%;
-    color: white;
-}
-/* about small text */
-.about-col-1 p{
-    font-size: 22px;
-    font-family: 'Times New Roman';
-    padding-top: 50px;
-}
-/* Education */
-.title-left{
-    text-align: center;
-    color: #FFD166;
-    /* padding: 15px 15px; */
-    padding-top: 50px;
-    font-size: 25px;
-    font-weight: 500;
-    font-family: 'Times New Roman';
-}
-/* about me column 2 */
-.about-col-2{
-    flex-basis: 40%;
-    /* padding-left: 4vw; */
-    font-size: 22px;
-}
-.about-col-2 p{
-    font-size: 25px;
-    font-weight: 500;
-    font-family: 'Times New Roman';
-}
 
-/* .sub-title{
-    font-size: 16px;
-    font-weight: 200;
-    color: white;
-} */
-.tab-titles{
-    display: flex;
-    /* margin: 20px 0 40px; */
-    color: #FFD166;
-}
-.tab-links{
-    margin-right: 40px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-}
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-.tab-links.active-link::after{
-    width: 50%;
 
-}
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-    color: #fff;
-    list-style-type: circle; /*bullet points*/
-}
-.tab-contents ul li span{
-    color: black;
-    font-size: 16px;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
-/* ----------------------------SKILL END---------------------- */
 /* <!-------------------------------------ABOUT END---------------------------------------> */
 /* <!---------------------------------------PROJECT---------------------------------------> */
 .projects {
@@ -328,7 +237,7 @@ nav ul li a:hover {
     margin-top: 0;
     margin-left: 7vw;
     margin-right: 15vw;
-    font-size: 3.5vw; 
+    font-size: 3.5vw;
     max-block-size: 3.5VW;
     text-align: left;
     color: #FFD166;
@@ -343,7 +252,7 @@ nav ul li a:hover {
     height: 0.5vh;
     background-color: #FFD166;
     width: 70%;
-    margin-left: 1.5vw; 
+    margin-left: 1.5vw;
     top: 75%;
 }
 /* see more button */
@@ -360,7 +269,7 @@ nav ul li a:hover {
     margin-top: 5vh;
     margin-left: 7vw;
     margin-right: 7vw;
-    
+
 }
 
 .work {
@@ -378,11 +287,11 @@ nav ul li a:hover {
 }
 
 .layer {
-    weight: 100%; 
+    weight: 100%;
     width: 100%;
     height: 0;
     background: linear-gradient(rgba(0, 1, 2, 0.7), #FFD166);
-    border-radius: 5vh; 
+    border-radius: 5vh;
     position: absolute;
     margin-left: 0;
     left: 0;
@@ -476,26 +385,26 @@ nav ul li a:hover {
 
 /* CONTACT title */
 .sub-title {
-    font-size: 2vw; 
+    font-size: 2vw;
     font-weight: 600;
     padding-bottom: 5vh;
     color: #FFD166;
 }
 
 .btn.btn2 {
-    margin-top: 3vh; 
+    margin-top: 3vh;
     display: inline-block;
     text-align: center;
     padding: 1vh 1vw;
     background: #FFD166;
-    border-radius: 0.5vw; 
+    border-radius: 0.5vw;
     text-decoration: none;
     margin-left: 4vw;
 }
 
 .btn.btn2 p {
     color: black;
-    font-size: 1vw; 
+    font-size: 1vw;
 }
 
 .contact-right {
@@ -511,10 +420,10 @@ form textarea {
     outline: none;
     background: #262626;
     padding: 2vh 2vw;
-    margin: 1vh 0; 
+    margin: 1vh 0;
     color: white;
     font-size: 1vw;
-    border-radius: 0.5vw; 
+    border-radius: 0.5vw;
     resize: none;
 }
 
@@ -524,20 +433,20 @@ form textarea {
     text-align: center;
     padding: 1vh 1vw;
     background: #FFD166;
-    border-radius: 0.5vw; 
+    border-radius: 0.5vw;
     text-decoration: none;
     margin-left: 98%;
 }
 form .btn3 {
-    padding: 1vw 1vw; 
-    font-size: 1vw; 
+    padding: 1vw 1vw;
+    font-size: 1vw;
     cursor: pointer;
 
 }
 
 .copyright {
     text-align: center;
-    padding: 0.5vh 0; 
+    padding: 0.5vh 0;
     background-color: transparent;
     background-size: cover;
     width: 100%;
@@ -554,7 +463,7 @@ form .btn3 {
 /* <!------------------------------------CONTACT END--------------------------------------> */
 
 /* <!------------------------------------JAVASCRIPT---------------------------------------> */
-/* <!--------------------------------JAVASCRIPT END---------------------------------------> */ 
+/* <!--------------------------------JAVASCRIPT END---------------------------------------> */
 /* ------------------------------------SMALL SCREEN------------------------------------------ */
 /* Add a media query for smaller screens (adjust the max-width value as needed) */
 @media (max-width: 768px) {
@@ -572,7 +481,7 @@ form .btn3 {
     .row {
         flex-direction: column;
     }
-    
+
     .header img {
         max-width: 75%; /* Adjust the image size for smaller screens */
     }
@@ -595,7 +504,7 @@ form .btn3 {
     nav {
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: center;
         margin: 0 0; /* Adjust margins for smaller screens */
         display: flex;
     }
@@ -609,12 +518,12 @@ form .btn3 {
     }
     .header-text {
         padding-top: 1rem;
-        font-size: 2rem; 
-        letter-spacing: 0.2rem; 
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
     }
     .sub-text {
         font-size: 1.2rem;
-        letter-spacing: 0.2rem; 
+        letter-spacing: 0.2rem;
     }
     .icons {
         align-items: center;
@@ -626,16 +535,16 @@ form .btn3 {
     }
 
     .social-icons a {
-        font-size: 1.5rem; 
-        margin-right: 0.2rem; 
+        font-size: 1.5rem;
+        margin-right: 0.2rem;
     }
     .row.row1 img {
         max-width: 10vw;
         margin-left: 2vw;
     }
     .about h1 {
-        font-size: 3rem; 
-        letter-spacing: 2px; 
+        font-size: 3rem;
+        letter-spacing: 2px;
     }
     .projects {
         padding: 0 1rem;

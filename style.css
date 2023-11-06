@@ -60,8 +60,8 @@ body {
 nav {
     display: inline-flexbox;
     /* align-items: flex-start; */
-    margin-left: 40vw;
-    /* margin-top: 0.7vh; */
+    padding: 1.8vw 2vh;
+    margin-left: 35vw;    /* margin-top: 0.7vh; */
     max-width: 40vw;
     position: relative;
     display: flex;
@@ -71,7 +71,6 @@ nav {
 nav ul {
     list-style: none;
     margin: 0 0;
-    padding: 0;
     position: relative;
 }
 
@@ -82,7 +81,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 1.6vw;
     max-block-size: 1.6vw;
@@ -114,6 +113,7 @@ nav ul li a:hover {
     font-size: 8vw;
     /* max-block-size: 8vw; */
     /* max-height: fit-content; */
+    padding: 5vh;
     margin-left: 5vw;
     position: relative;
 }
@@ -190,11 +190,12 @@ nav ul li a:hover {
 
 /* <!-------------------------------------HEADER END--------------------------------------> */
 /* <!---------------------------------------ABOUT-----------------------------------------> */
-.about {
+#about-section{
     margin-top: 10vh; /* Set the top margin using viewport height (vh) units */
     position: relative;
     display: block;
     align-items: center;
+    padding: 60px 60px;
 
 }
 .about-big{
@@ -204,11 +205,11 @@ nav ul li a:hover {
     text-align: center;
     color: #FFD166;
     position: relative;
-    letter-spacing: 0.8vw; /* Use vw for letter spacing */
+    letter-spacing: 0.4vw; /* Use vw for letter spacing */
+    margin-bottom: 20px;
 }
 
 .about-big::before {
-    margin-left: 5vw; /* Use vw for margin */
     content: "";
     position: absolute;
     width: 13%;
@@ -221,15 +222,102 @@ nav ul li a:hover {
 
 .about-small{
     margin-top: 5vh; /* Adjust the top padding as needed */
-    text-align: center;
     color: white;
+    text-align: left;
     font-size: 1.5vw; /* Use vw for font size */
-    max-block-size: 1.3vw;
-    letter-spacing: 0.2vw; /* Use vw for letter spacing */
     font-family: 'cursive';
 }
+/* ---------------------------SKILLS------------------- */
+.about{
+    padding: 60px 10px;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+}
+.row.about-row{
+    /* display: flex; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.about-col-1{
+    flex-basis: 40%;
+    color: white;
+}
+/* about small text */
+.about-col-1 p{
+    font-size: 22px;
+    font-family: 'Times New Roman';
+    padding-top: 50px;
+}
+/* Education */
+.title-left{
+    text-align: center;
+    color: #FFD166;
+    /* padding: 15px 15px; */
+    padding-top: 50px;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Times New Roman';
+}
+/* about me column 2 */
+.about-col-2{
+    flex-basis: 40%;
+    /* padding-left: 4vw; */
+    font-size: 22px;
+}
+.about-col-2 p{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Times New Roman';
+}
 
+/* .sub-title{
+    font-size: 16px;
+    font-weight: 200;
+    color: white;
+} */
+.tab-titles{
+    display: flex;
+    /* margin: 20px 0 40px; */
+    color: #FFD166;
+}
+.tab-links{
+    margin-right: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
 
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    color: #fff;
+    list-style-type: circle; /*bullet points*/
+}
+.tab-contents ul li span{
+    color: black;
+    font-size: 16px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* ----------------------------SKILL END---------------------- */
 /* <!-------------------------------------ABOUT END---------------------------------------> */
 /* <!---------------------------------------PROJECT---------------------------------------> */
 .projects {
@@ -507,7 +595,7 @@ form .btn3 {
     nav {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
         margin: 0 0; /* Adjust margins for smaller screens */
         display: flex;
     }

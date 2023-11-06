@@ -67,21 +67,60 @@
 <!-------------------------------------HEADER END-------------------------------------->
 
 <!---------------------------------------ABOUT----------------------------------------->
-<div class="about" id="about-section">
+
+<div id= "about-section">
     <div class="container">
-        <div class="about-big">
-            <span>ABOUT ME</span>
+        <div class="about-top">
+            <span><h3 class="about-big">ABOUT ME<h3></span>
         </div>
-        <p class="about-small">My name is Han Nguyen and I am a Computer Science student <br>at Georgia Institute of Technology.
-            I am passionate about Science and Mathematics. <br>
-            I am so delighted to have chosen a path which allows me to exercise 
-            my passion <br>for cultivating knowledge. I always discipline myself to learn and build 
-            a solid foundation <br> in programming. I am looking for an internship to strengthen
-            my skills and future career. <br> I am excited to apply what I have learned to build
-            innovative solutions.</p>
+        <div class="row about-row">
+            <div class="about-col-1">
+                <div class="title-left">Education</div>
+                <p>I am Han Nguyen, a hard-working Computer Science student at Georgia Institute of Technology.
+                    I am passionate in science, especially Mathematics. 
+                    I am so delighted to have chosen a path which allows me to exercise 
+                    my passion for cultivating knowledge. I always discipline myself to learn and build 
+                    a solid foundation in programming. I am looking for an internship to strengthen
+                    my skills and future career. I am excited to apply what I have learned to build
+                    innovative solutions.</p>   
+            </div>
+            <div class="about-col-2">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Programming languages</p>
+                        <p class="tab-links" onclick="opentab('experience')">Environment and Libraries</p>
+                        <p class="tab-links" onclick="opentab('education')">Relevant Courses</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>C</li>
+                            <li>Assembly</li>
+                            <li>HTML/CSS</li>
+                            <li>Latex</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>IntelIJ</li>
+                            <li>VScode</li>
+                            <li>Github</li>
+                            <li>Figma</li>
+                            <li>Docker</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>Machine Learning</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Object-Oriented Programming</li>          
+                        </ul>
+                    </div>
+            </div>
+        </div>
     </div>
-    </div>
-</div> 
+</div>
 <!-------------------------------------ABOUT END--------------------------------------->
 <!---------------------------------------PROJECT--------------------------------------->
 
@@ -127,7 +166,7 @@
             <div class="contact-left">
                 <div class="row bee">
                     <img src="./images/beeLogo.png" class="bee">
-                    <h1 class="contact-text" >Contact<br> me</h1>
+                    <h1 class="contact-text" >Contact me</h1>
                 </div>
                 <p><i class="fa-regular fa-paper-plane"></i>  hnguyen22793@gmail.com</p>
                 <p><i class="fa-solid fa-mobile-screen"></i> (470) - 989 9681</p>
@@ -136,7 +175,7 @@
 
             <form name="submit-to-google-sheet">
             <div class="contact-right">
-                <h1 class="sub-title sub2" >Message <br>me</h1>
+                <h1 class="sub-title sub2" >Message me</h1>
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>

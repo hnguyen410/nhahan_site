@@ -239,8 +239,6 @@ nav ul li a:hover {
     color: white;
     font-size: 20px; /* Use vw for font size */
     max-block-size: 1.3vw;
-    padding-bottom: 100px;
-    margin-bottom: 2vh;
 }
   
 
@@ -254,7 +252,7 @@ nav ul li a:hover {
     flex: 1;
 }
 .ess {
-    margin-top: 20vh;
+    margin-top: 35vh;
 }
 
 #about-section{

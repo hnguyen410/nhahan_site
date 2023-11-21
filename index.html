@@ -15,6 +15,7 @@
 </head>
 <body>
 <!---------------------------------------HEADER---------------------------------------->
+
     <div class="header" id="header-section">
         <div class="container">
             <div class="row row1">
@@ -83,17 +84,81 @@
     </div>
 </div>
 <!-------------------------------------ABOUT END--------------------------------------->
+<!-------------------------------------EDUCATION & SKILLS--------------------------------------->
+
+<div class="container2">
+    <!-- education column -->
+    <div class="education-column"> 
+        <h2 class = "underline" id="edu">Education</h2>
+        <ul class="education-list">
+          <div class="education-row" id="gt">
+            <div class="column" id="year-col">2020 - 2024</div>
+                <div class="column" id="school-col">
+                    <span class="big-text">Bachelor of Computer Science<br></span>
+                    <span class="small-text">Georgia Institute of Technology</span>
+                </div>
+            </div>
+        <div class="education-row" id="gsu">
+            <div class="column" id = year-col>2015 - 2019</div>
+            <div class="column" id="school-col">               
+                <span class="big-text">Associates of Science<br></span>
+                <span class="small-text">Georgia State University, Perimeter College</span>
+            </div>
+        </div>
+        </ul>
+      </div>
+    <div class="skills-column">
+      <h2 class="underline" id="">Skills</h2>
+      <div class="skill-row">
+        <div class="column">
+            <ul class="skills-list">
+                <li id="first-skill" data-content="<ul><li>Java</li><li>Python</li><li>C</li><li>Assembly</li></ul>">Programming Languages</li>
+                <li data-content="<ul><li>HTML/CSS</li><li>Wordpress</li><li>Strapi</li><li>Figma</li></ul>">Web Development</li>
+                <li data-content="<ul><li>IntelIj</li><li>VSCode</li><li>GitHub</li><li>Docker</li></ul>">Frameworks</li>
+                <li data-content="<ul><li>Numpy</li><li>MATLAB</li><li>Pandas</li><li>Scikit-learn</li></ul>">Scientific Computing</li>
+                <li data-content="<ul><li>Latex</li><li>MS Office</li><li>Item 3</li></ul>">Technical Writing</li>
+
+
+            </ul>
+        </div>
+        <div class="column" id="bullet">
+            <div class="additional-column">
+                <ul><li>Java</li><li>Python</li><li>C</li><li>Assembly</li></ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+</div>
+<!-------------------------------------EDUCATION & SKILLS END--------------------------------------->
+
 <!---------------------------------------PROJECT--------------------------------------->
 
 <div class="projects" id="project-section">
     <div class="container">
         <h1 class="project-header">PROJECTS</h1>
-        <div class="work-list">
+        
+        <div class="work-list list1">
+            <div class="work">
+                <img src="images/ml.png">
+                <div class="layer">
+                    <h3>PREDICTIVE ANALYSIS <br>OF COVID-19</h3>
+                    <p>machine learning</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="work-list list2">
             <div class="work">
                 <img src="images/brainPC.png">
                 <div class="layer">
-                    <h3>GAME BOY ANDVANCE</h3>
-                    <p>gaming simulator</p>
+                    <h3>GAME BOY ADVANCE</h3>
+                    <p>game development</p>
                     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
@@ -114,6 +179,8 @@
                 </div>
             </div>
         </div>
+    </div>
+
         <a href="#" class="see-more"><h3>See more</h3></a>
     </div>
 </div>
@@ -126,7 +193,7 @@
         <div class="row">
             <div class="contact-left">
                 <div class="row bee">
-                    <img src="./images/beeLogo.png" class="bee">
+                    <img src="./images/beeLogo.png" alt="Logo" class="bee1">
                     <h1 class="contact-text" >Contact<br> me</h1>
                 </div>
                 <p><i class="fa-regular fa-paper-plane"></i>  hnguyen22793@gmail.com</p>
@@ -136,7 +203,7 @@
 
             <form name="submit-to-google-sheet">
             <div class="contact-right">
-                <h1 class="sub-title sub2" >Message <br>me</h1>
+                <h1 class="sub-title sub2" >Message me</h1>
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -191,6 +258,22 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     })
     .catch(error => console.error('Error!', error.message))
 })
+// script for skill list
+
+
+const skillsList = document.querySelectorAll('.skills-list li');
+const additionalColumn = document.querySelector('.additional-column');
+
+  skillsList.forEach((skill) => {
+    skill.addEventListener('mouseover', (event) => {
+      const content = event.target.getAttribute('data-content');
+      additionalColumn.innerHTML = content; // Use innerHTML to render HTML content
+    });
+  });
+
+
+
+
 </script>
 <!------------------------------------CONTACT END-------------------------------------->
 

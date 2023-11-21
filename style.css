@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Gill Sans Extrabold", sans-serif;
-    font-family: "Goudy Bookletter 1911", sans-serif;
+    /* font-family: "Goudy Bookletter 1911", sans-serif; */
+    font-family: Arial, sans-serif;
+
 }
 
 html {
@@ -20,6 +22,7 @@ body {
     font-size: 16px;
     display: block;
 }
+
 
 #header {
     background-size: cover;
@@ -80,7 +83,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: #fff;
     text-decoration: none;
     font-size: 1.6vw;
     max-block-size: 1.6vw;
@@ -114,6 +117,11 @@ nav ul li a:hover {
     /* max-height: fit-content; */
     margin-left: 5vw;
     position: relative;
+}
+.logo:hover {
+    width: 100%;
+    color: #fff;
+    transform: scale(1.2);
 }
 .row.row1 img{
     height: 100%;
@@ -195,42 +203,216 @@ nav ul li a:hover {
 
 }
 .about-big{
-    font-size: 3vw; /* Use a percentage of viewport width (vw) for font size */
+    font-size: 45px; /* Use a percentage of viewport width (vw) for font size */
     max-block-size: 3vw;
     max-height: 10%;
     text-align: center;
     color: #FFD166;
     position: relative;
-    letter-spacing: 0.8vw; /* Use vw for letter spacing */
+    letter-spacing: 8px; /* Use vw for letter spacing */
+    text-shadow: 2px 2px 4px rgba(43, 41, 41, 0.8); /* Add a shadow effect */
 }
-
+.about-big::after {
+    content: ""; /* Add an empty content for the pseudo-element */
+    position: absolute; /* Position the pseudo-element */
+    bottom: -5px; /* Adjust the position of the pseudo-element */
+    left: 43%; /* Adjust the starting position of the underline */
+    width: 14%; /* Set the width of the underline */
+    border-bottom: 3px solid; /* Add the underline style */
+}
+  
 .about-big::before {
     margin-left: 5vw; /* Use vw for margin */
-    content: "";
     position: absolute;
-    width: 13%;
-    max-width: 15%;
-    height: 0.5vh; /* Use vh for height */
-    max-height: 0.5vh;
+    width: 10vw;
+    /* max-width: 15%; */
+    height: 5px; /* Use vh for height */
+    max-height: 5px;
     bottom: -1vh; /* Use vh for margin */
-    border-bottom: 0.3vw solid #FFD166; /* Use vw for border width */
 }
 
 .about-small{
     margin-top: 5vh; /* Adjust the top padding as needed */
     text-align: center;
     color: white;
-    font-size: 1.5vw; /* Use vw for font size */
+    font-size: 20px; /* Use vw for font size */
     max-block-size: 1.3vw;
-    letter-spacing: 0.2vw; /* Use vw for letter spacing */
-    font-family: 'cursive';
 }
-
+  
 
 /* <!-------------------------------------ABOUT END---------------------------------------> */
+
+/* <!-------------------------------------EDUCATION & SKILLS---------------------------------------> */
+
+.container2 {
+    margin: 0 10%;
+    padding-top: 30vh;
+    display: flex;
+    justify-content: space-between;
+
+
+  }
+  /* title effect */
+  .underline{
+    position: relative;
+    cursor: pointer;
+  }
+  .underline::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.5px;
+    background-color: #FFD166;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    transform: scaleX(1); /* Show the line by default */
+    transition: transform 0.3s ease-in-out;
+  }
+
+/* effect for skill column */
+  
+  /* done title effect */
+  .education-column,
+  .skills-column {
+    width: calc(50% - 8%); /* the gap between 2 columns*/
+    padding: 0 30px;
+    position: relative;
+    padding-top: 30px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.3));
+    border-radius: 20px;
+    overflow: hidden; /* Ensure the background doesn't overflow */
+    color: #FFD166;
+    box-shadow: 10px 5px 4px rgba(0, 0, 0, 0.4);
+
+
+  }
+  /* education row for schools */
+  .education-row {
+    display: flex;
+    /* margin-bottom: 20px; */
+    flex: 0 0 calc(50% - 10px); /* Setting column width with gap */
+    padding: 20px;
+    padding-left: 30px;
+    margin-right: 20px; /* Adding gap between columns */
+  }
+
+  .skill-row {
+    display: flex;
+    flex: 0 0 calc(50%); /* Setting column width with gap */
+    padding-top: 20px;
+    padding-left: 40px;
+  }
+  .skills-column > .skill-row > .column {
+    flex: 0 0 60%; /* First column width */
+    
+  }
+
+  #bullet{
+    margin-top: 30px;
+    list-style: none; /* Remove default list styles */
+    margin-left: 30px;
+  }
+
+#bullet li {
+    padding-bottom: 17px; /* Adjust vertical padding */
+    font-size: 18px;
+  }
+#school-col{
+    margin-left: 4vw;
+}
+
+  .education-column::before,
+  .skills-column::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 10px;
+    top: -10px; /* Adjusting position to create a gap */
+    left: -10px; /* Adjusting position to create a gap */
+    width: calc(100% + 20px); /* Adding extra width for the gap */
+    height: calc(100% + 20px); /* Adding extra height for the gap */
+    
+  }
+  .education-column h2,
+  .skills-column h2 {
+    text-align: center;
+    z-index: 1;
+  }
+  .education-list,
+  .skills-list {
+    list-style: none;
+    padding: 5vh 0;
+    z-index: 1;
+  }
+  .education-list li,
+  .skills-list li {
+    margin-bottom: 17px;
+  }
+  .big-text {
+    font-size: 20px; /* Larger font size */
+    color: white; /* White color */
+  }
+  .small-text {
+    font-size: 14px; /* Smaller font size */
+    color: #FFD166; /* Yellow color */
+    font-style: italic; /* Italic style */
+
+  }
+  /* the year of school */
+  #year-col {
+    font-weight: 700;
+    font-size: medium;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s, border-bottom-color 0.3s;
+  }
+  #year-col:hover {
+    color: #FFD166; /* Change color on hover */
+    transform: scale(1.1); /* Scale the text to 1.5 times on hover */
+  }
+/* skill list  */
+.skills-list {
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.additional-column {
+    border-radius: 5px;
+    margin-top: 10px; /* Adjust spacing between items */
+    display: none; /* Initially hide the additional column */
+    padding: 5px;
+    position: relative;
+    z-index: 1; /* Ensure text is on top of the background */
+    position: relative;
+    text-decoration: none;
+  }
+  .skills-list li {
+    transition: transform 0.3s; /* Add transition for smooth scaling */
+    transform-origin: center left; /* Set the transform origin to the center */
+
+  }
+  .skills-list li:hover {
+    transform: scale(1.2); /* Scale up the item on hover */
+    color: #FFD166;
+  }
+  .skills-list li:hover, .additional-column {
+    display: block; /* Show column when li is hovered */
+  }
+  /* <!-------------------------------------EDUCATION & SKILLS END---------------------------------------> */
+
 /* <!---------------------------------------PROJECT---------------------------------------> */
 .projects {
-    margin-top: 30vh; /* Set the top margin using viewport height (vh) units */
+    margin-top: 20vh; /* Set the top margin using viewport height (vh) units */
     align-items: center;
 }
 .project-header {
@@ -261,14 +443,35 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
 }
-.work-list {
+/* .work-list {
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 3.5vw;
-    margin-top: 5vh;
+    grid-gap: 30px;
+    margin-top: 30px;
     margin-left: 7vw;
     margin-right: 7vw;
+    height: 40vh;
+
+} */
+
+.work-list.list1 {
+    position: relative;
+    display: grid;
+    margin-top: 8vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    height: 30vh;
+
+}
+.work-list.list2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    margin-top: 0px;
+    margin-left: 6vw;
+    margin-right: 6vw;
 
 }
 
@@ -277,10 +480,16 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
 }
-
+.work.top {
+    margin-top: 10vh;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    flex: 1;
+    height: 30vh;
+}
 .work img {
     width: 100%;
-    border-radius:5vh;
+    border-radius:20px;
     display: block;
     transition: transform 0.5s;
     position: relative;
@@ -352,6 +561,10 @@ nav ul li a:hover {
 .row.bee{
     flex: auto;
 }
+.bee1{
+    height: auto; /* Maintain aspect ratio */
+    animation: moveUpDown 0.8s ease-in-out infinite alternate; /* Faster animation: 0.5 seconds */
+}
 .row.bee img {
     height: 100%;
     max-width: 8vw;
@@ -361,19 +574,20 @@ nav ul li a:hover {
     margin-right: 0.5vw;
 }
 .row.bee h1{
-    font-size: 2vw;
+    font-size: 25px;
     font-weight: 600;
     padding-bottom: 5vh;
     text-align: left;
     color: #FFD166;
     margin-left: 1.3vw;
     margin-top: 10vh;
+    position: relative;
 }
 /* CONTACT LEFT */
 .contact-left p {
     margin-left: 0vw;
     color: white;
-    font-size: 1vw;
+    font-size: 16px;
 }
 
 .contact-left p i {
@@ -385,9 +599,9 @@ nav ul li a:hover {
 
 /* CONTACT title */
 .sub-title {
-    font-size: 2vw;
+    font-size: 30px;
     font-weight: 600;
-    padding-bottom: 5vh;
+    padding-bottom: 3vh;
     color: #FFD166;
 }
 
@@ -395,16 +609,16 @@ nav ul li a:hover {
     margin-top: 3vh;
     display: inline-block;
     text-align: center;
-    padding: 1vh 1vw;
+    padding: 10px 15px;
     background: #FFD166;
-    border-radius: 0.5vw;
+    border-radius: 10px;
     text-decoration: none;
     margin-left: 4vw;
 }
 
 .btn.btn2 p {
     color: black;
-    font-size: 1vw;
+    font-size: 15px;
 }
 
 .contact-right {
@@ -426,20 +640,35 @@ form textarea {
     border-radius: 0.5vw;
     resize: none;
 }
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Apply a shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smoothness */
+  }
+  
+.btn:hover {
+    transform: translateY(-2px); /* Move button upwards on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4); /* Adjust shadow on hover */
+}
 
 .btn.btn3 {
     margin-top: 2vh;
     display: inline-block;
     text-align: center;
-    padding: 1vh 1vw;
+    padding: 10px 40px;
     background: #FFD166;
-    border-radius: 0.5vw;
+    border-radius: 10px;
     text-decoration: none;
-    margin-left: 98%;
+    margin-left: 85%;
 }
+
 form .btn3 {
-    padding: 1vw 1vw;
-    font-size: 1vw;
+    padding: 1vw 4vw;
+    font-size: 15px;
     cursor: pointer;
 
 }
@@ -457,7 +686,7 @@ form .btn3 {
 }
 
 .copyright p {
-    font-size: 1.3vh; /* Adjust the font size using viewport width (vw) units */;
+    font-size: 12px; /* Adjust the font size using viewport width (vw) units */;
 }
 
 /* <!------------------------------------CONTACT END--------------------------------------> */
@@ -494,7 +723,10 @@ form .btn3 {
         position: relative;
         margin-top: 3.5vh;
         display: block;
+        animation: moveUpDown 2s ease-in-out infinite alternate; /* Use the defined animation */
+
     }
+
     .header-text,
     .sub-text {
         text-align: center;
@@ -646,3 +878,32 @@ form .btn3 {
     margin-top: 10px;
     display: block;
 }
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0); /* Start position */
+    }
+    100% {
+      transform: translateY(-10px); /* End position */
+    }
+}
+
+@keyframes rotateBackAndForth {
+    0% {
+        transform: perspective(500px) rotateY(-5deg); /* Rotate slightly to the left */
+    }
+    100% {
+        transform: perspective(500px) rotateY(5deg); /* Rotate slightly to the right */
+    }
+    }
+
+@keyframes rotateScale {
+    0% {
+        transform: perspective(500px) rotateY(-5deg) scale(0.9); /* Initial state: rotate left and scale down */
+    }
+    50% {
+        transform: perspective(500px) rotateY(5deg) scale(1.1); /* Middle state: rotate right and scale up */
+    }
+    100% {
+        transform: perspective(500px) rotateY(-5deg) scale(0.9); /* Final state: rotate left and scale down */
+    }
+    }

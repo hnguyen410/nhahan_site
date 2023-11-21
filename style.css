@@ -249,11 +249,14 @@ nav ul li a:hover {
 /* <!-------------------------------------EDUCATION & SKILLS---------------------------------------> */
 
 .es {
-    margin-top: 20vh;
+    padding-top: 20vh;
     display: inline-flexbox;
     column-gap: 0px;
     flex: 1;
 
+}
+#about-section{
+    margin-bottom: 10%;
 }
 /* .education-skills{
     margin-top: 5vh;
